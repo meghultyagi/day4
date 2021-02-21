@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body{ background-color:LightBlue;
+    		}
+    div{ background-color:white;
+      border-radius: 12px;
+    	 border: 1px solid black;
+         margin:200px 500px;
+         text-align:center;
+         width:30%;}
+    .button{ background-color:yellow;}
+    .button:hover{
+      background-color:red;
+    }
+
+</style>
+<body>
+
+  <div><h2>Amount Calculator</h2>
+  <p>Enter Bill Amount!</p>
+
+  <pre>$<input type="number" id="myNumber1" value=""></pre>
+
+  <p>How many people are sharing the bill?</p>
+
+  <input type="number" id="myNumber2" value="1">
+  <pre>
+  </pre>
+
+  <button class="button button1" onclick="myFunction()">Calculate</button>
+
+
+
+  <p id="demo"></p></div>
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myNumber1").value;
+    var y = document.getElementById("myNumber2").value;
+    if(x=="")
+    alert("Enter Value");
+    else if(y=="")
+    {
+      y=1;
+      document.getElementById("demo").innerHTML ="Contribution per person: $"+ x/y;
+    }
+    else {
+      document.getElementById("demo").innerHTML = "Contribution per person: $" + x/y;
+    }
+
+  }
+  </script>
+
+</body>
+</html>
